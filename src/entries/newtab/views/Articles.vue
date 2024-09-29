@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Articles!</h2>
+    <h2>Artículos</h2>
   </section>
 </template>
 

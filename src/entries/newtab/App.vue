@@ -2,12 +2,13 @@
   <div>
     <aside>
       <nav>
-        <RouterLink to="/">Articles</RouterLink>
-        <RouterLink to="/feeds">Feeds</RouterLink>
+        <RouterLink to="/">Artículos</RouterLink>
+        <RouterLink to="/feeds">Suscripciones</RouterLink>
       </nav>
     </aside>
     <main>
-      <h1>Hello world!</h1>
+      <h1>Feedyerface</h1>
+      <p>RSS feeds, in yer face.</p>
       <RouterView />
     </main>
   </div>

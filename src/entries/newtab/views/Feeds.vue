@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Feeeeeeeeeeeeds!</h2>
+    <h2>Tus suscripciones</h2>
     <form id="add-feed" action="index.html" @submit.prevent="createFeed">
       <h3>Introduce un nuevo feed a tu lista</h3>
       <label for="title">Título</label>
