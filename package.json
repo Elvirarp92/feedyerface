@@ -1,0 +1,29 @@
+{
+  "name": "feedyerface",
+  "version": "1.0.0",
+  "displayName": "Feed yer Face",
+  "author": "Ira Ramírez <elvirarp92@gmail.com>",
+  "description": "A feed reader, in yer face. It shows you a list of your feeds every time you open a new tab.",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch --mode development --minify false",
+    "dev": "vite",
+    "serve:firefox": "web-ext run --start-url \"about:debugging#/runtime/this-firefox\"  --source-dir ./dist/",
+    "serve:chrome": "web-ext run -t chromium --start-url \"https://example.com\" --source-dir ./dist/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@samrum/vite-plugin-web-extension": "^5.0.0",
+    "@types/chrome": "^0.0.254",
+    "@types/webextension-polyfill": "^0.10.6",
+    "@vitejs/plugin-vue": "^4.5.0",
+    "vite": "^5.0.0",
+    "web-ext": "^7.8.0"
+  },
+  "dependencies": {
+    "vue": "^3.3.8",
+    "vue-router": "^4.4.5",
+    "webextension-polyfill": "^0.10.0"
+  }
+}
