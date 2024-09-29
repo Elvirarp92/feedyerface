@@ -14,5 +14,15 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
+import { useIndexedDatabaseStore } from './stores/indexedDatabaseStore.js'
+
+// Stores
+const indexedDatabaseStore = useIndexedDatabaseStore()
+
+// Hooks
+onMounted(() => {
+  indexedDatabaseStore.readFeeds()
+})
 </script>
 
