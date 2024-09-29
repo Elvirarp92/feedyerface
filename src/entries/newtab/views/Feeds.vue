@@ -21,6 +21,15 @@
       />
       <button type="submit">Añadir</button>
     </form>
+    <section>
+      <h3>Tus suscripciones</h3>
+      <ul>
+        <li v-for="feed in indexedDatabaseStore.$state.feeds" :key="feed.url">
+          {{ feed.title }} ({{ feed.url }})
+          <button @click="indexedDatabaseStore.deleteFeed(feed)">Desuscribirse</button>
+        </li>
+      </ul>
+    </section>
   </section>
 </template>
 

@@ -79,5 +79,25 @@ export default {
 				}
 			};
     })
+  },
+
+  async deleteFeed(feed) {
+    // making sure everything is initialized before we go doing CRUD operations
+    const db = await this.getDb()
+
+    return new Promise((resolve, reject) => {
+      const transaction = db.transaction(['feeds'], 'readwrite')
+
+      transaction.oncomplete = () => {
+        resolve()
+      }
+
+      transaction.onerror = error => {
+        reject(error)
+      }
+
+      const store = transaction.objectStore('feeds')
+      store.delete(feed.url)
+    })
   }
 }

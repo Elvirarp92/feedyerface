@@ -20,6 +20,11 @@ export const useIndexedDatabaseStore = defineStore('indexedDatabase', {
       await idb.createFeed(feed)
 
       this.readFeeds()
+    },
+
+    async deleteFeed(feed) {
+      await idb.deleteFeed(feed)
+      this.readFeeds()
     }
   }
 
